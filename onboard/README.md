@@ -1,5 +1,8 @@
 # onboard
 
+![onboardscreen](https://user-images.githubusercontent.com/70916991/154319145-f5d75550-33ec-405f-9303-23f58cfaceb8.gif)
+
+
 A new Flutter project.
 
 ## Getting Started
