@@ -14,10 +14,11 @@ class OnboardScreen extends StatefulWidget {
 class _OnboardScreenState extends State<OnboardScreen> {
   int currentIndex = 0;
   PageController? _controller;
+  int _initialPage = 0;
 
   @override
   void initState() {
-    _controller = PageController(initialPage: 0);
+    _controller = PageController(initialPage: _initialPage);
     super.initState();
   }
 
