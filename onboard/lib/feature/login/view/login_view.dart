@@ -26,7 +26,7 @@ class _LoginViewState extends State<LoginView> {
             ? const ScrollPhysics()
             : const NeverScrollableScrollPhysics(),
         child: SizedBox(
-          height: MediaQuery.of(context).size.height,
+          height: context.dynamicHeight(1),
           child: Padding(
             padding: context.paddingLow,
             child: Column(
@@ -58,8 +58,8 @@ class _LoginViewState extends State<LoginView> {
   }
 
   Text _buildBottomText() {
-    return const Text(
-      "Don't you have an account ? Create one.",
+    return Text(
+      AppStrings.haveAccount,
       textAlign: TextAlign.center,
     );
   }
@@ -87,7 +87,7 @@ class _LoginViewState extends State<LoginView> {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(primary: Colors.pink),
       child: Text(
-        "LOGIN",
+        AppStrings.loginPage,
         textAlign: TextAlign.center,
         style: context.textTheme.headline5?.copyWith(
           color: Colors.white,
@@ -107,12 +107,12 @@ class _LoginViewState extends State<LoginView> {
                 controller: _mailController,
                 textInputType: TextInputType.emailAddress,
                 focusNode: _emailNode,
-                labelText: 'Email Adress'),
+                labelText: AppStrings.email),
             CustomTextFormField(
               controller: _passwordController,
               textInputType: TextInputType.text,
               focusNode: _passwordNode,
-              labelText: 'Password',
+              labelText: AppStrings.password,
               isPassword: true,
             ),
             Padding(
@@ -123,7 +123,7 @@ class _LoginViewState extends State<LoginView> {
                   Padding(
                     padding: context.paddingLow,
                     child: Text(
-                      "Forgot Password?",
+                      AppStrings.forgot,
                       style: context.textTheme.bodyText1,
                     ),
                   )
